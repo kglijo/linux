@@ -1,0 +1,41 @@
+SED (Stream Editor): SED is primarily designed for performing basic text transformations on input streams or files. It operates on a line-by-line basis, applying operations such as substitution, deletion, insertion, and line addressing.
+
+SED: SED uses simple commands with a concise syntax. It applies operations based on patterns and commands, such as s (substitute), d (delete), p (print), a (append), and i (insert).
+Substituting text:
+bash
+Copy code
+sed 's/foo/bar/' file.txt
+This command substitutes the first occurrence of "foo" with "bar" in each line of the file.txt and prints the modified text.
+
+Replacing text in-place:
+bash
+Copy code
+sed -i 's/foo/bar/g' file.txt
+This command performs an in-place substitution of all occurrences of "foo" with "bar" in the file.txt, modifying the file directly.
+
+Deleting lines matching a pattern:
+bash
+Copy code
+sed '/pattern/d' file.txt
+This command deletes all lines in file.txt that match the specified pattern.
+
+Printing specific lines:
+bash
+Copy code
+sed -n '5,10p' file.txt
+This command prints lines 5 to 10 from file.txt while suppressing the default output.
+
+Inserting text before or after a pattern:
+bash
+Copy code
+sed '/pattern/i Inserted text' file.txt
+sed '/pattern/a Appended text' file.txt
+These commands insert "Inserted text" before lines matching the pattern or append "Appended text" after lines matching the pattern in file.txt.
+
+Transforming characters or strings:
+bash
+Copy code
+sed 'y/abc/xyz/' file.txt
+This command performs a character-level transliteration, replacing "a" with "x", "b" with "y", and "c" with "z" in each line of file.txt.
+
+These are just a few examples of how sed can be used. sed provides various commands, options, and capabilities for performing text transformations and editing files. It is a powerful tool for streamlining text processing tasks in shell scripts or interactive command-line usage. You can explore more features and advanced usage by referring to the sed manual (man sed) or its documentation.

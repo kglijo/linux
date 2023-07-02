@@ -1,0 +1,26 @@
+Purpose:
+
+SED (Stream Editor): SED is primarily designed for performing basic text transformations on input streams or files. It operates on a line-by-line basis, applying operations such as substitution, deletion, insertion, and line addressing.
+AWK (Pattern Scanning and Processing Language): AWK is a more comprehensive language for processing and manipulating structured text data. It is particularly well-suited for working with columns or fields of data, performing calculations, conditional processing, and generating reports.
+Syntax:
+
+SED: SED uses simple commands with a concise syntax. It applies operations based on patterns and commands, such as s (substitute), d (delete), p (print), a (append), and i (insert).
+AWK: AWK has a more complex syntax and supports a wider range of operations. It uses patterns, actions, and variables. The general structure is pattern { action }, where the pattern specifies when the action should be applied.
+Field and Column Manipulation:
+
+SED: SED does not have built-in support for fields or columns. It primarily operates on entire lines of text.
+AWK: AWK excels at working with structured data that has columns or fields. It automatically splits input lines into fields and provides various built-in variables like $1, $2, etc., to refer to specific fields. AWK also supports field separators customization.
+Calculations and Conditionals:
+
+SED: SED has limited support for calculations and conditionals. It primarily focuses on text transformations rather than complex calculations.
+AWK: AWK has robust support for performing calculations and implementing conditionals. It provides arithmetic operators, built-in mathematical functions, logical operators, and control flow statements like if, else, while, and for.
+File Editing:
+
+SED: SED is commonly used for in-place file editing, where it modifies the input file directly using the -i option.
+AWK: AWK typically reads input from files but does not have a built-in option for in-place file editing. Instead, it processes input and produces output that can be redirected to a new file.
+In summary, SED is a streamlined tool for basic text transformations and line-based editing, while AWK is a more comprehensive language for manipulating structured text data, working with fields/columns, performing calculations, and implementing conditionals. The choice between SED and AWK depends on the complexity of the task and the nature of the data being processed.
+
+
+
+
+
